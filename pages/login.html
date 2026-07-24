@@ -1,1 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JustMod Login</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+
+<body>
+
+<header>
+<h1>🔐 JustMod Login</h1>
+<p>Login to upload your Minecraft mods</p>
+</header>
+
+<section class="hero">
+
+<input id="email" type="email" placeholder="Email">
+
+<br><br>
+
+<input id="password" type="password" placeholder="Password">
+
+<br><br>
+
+<button class="download" onclick="login()">
+Login
+</button>
+
+<button class="download" onclick="signup()">
+Create Account
+</button>
+
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="../supabase.js"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
