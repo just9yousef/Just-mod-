@@ -1,4 +1,4 @@
-* {
+{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -90,4 +90,17 @@ footer {
   text-align: center;
   padding: 20px;
   color: #aaa;
+}
+.download {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #1f8b3a;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
+
+.download:hover {
+  background: #2dbb55;
 }
