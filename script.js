@@ -1,16 +1,32 @@
-const search = document.querySelector(".hero input");
-const cards = document.querySelectorAll(".card");
+async function signup() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-search.addEventListener("input", () => {
-  const text = search.value.toLowerCase();
-
-  cards.forEach(card => {
-    const name = card.textContent.toLowerCase();
-
-    if (name.includes(text)) {
-      card.style.display = "block";
-    } else {
-      card.style.display = "none";
-    }
+  const { data, error } = await supabaseClient.auth.signUp({
+    email: email,
+    password: password
   });
-});
+
+  if (error) {
+    alert(error.message);
+  } else {
+    alert("Account created! Check your email.");
+  }
+}
+
+
+async function login() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: password
+  });
+
+  if (error) {
+    alert(error.message);
+  } else {
+    alert("Login successful!");
+  }
+}
